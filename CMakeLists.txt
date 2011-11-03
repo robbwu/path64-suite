@@ -54,6 +54,7 @@ option(PATH64_ENABLE_FORTRAN "Enables Fortran" ON)
 option(PATH64_ENABLE_MATHLIBS "Enables math libraries" ON)
 option(PATH64_ENABLE_OPENMP "Enables OpenMP" ON)
 option(PATH64_ENABLE_PATHOPT2 "Enables 'PATHOPT2'" OFF)
+option(PATH64_ENABLE_PATHAS "Enables PathAS" ON)
 
 
 if("${CMAKE_BUILD_TYPE}" STREQUAL "Release" AND (NOT "${CMAKE_C_COMPILER_ID}" STREQUAL "PathScale"))
