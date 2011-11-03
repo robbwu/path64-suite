@@ -57,8 +57,11 @@ option(PATH64_ENABLE_PATHOPT2 "Enables 'PATHOPT2'" OFF)
 option(PATH64_ENABLE_PATHAS "Enables PathAS" ON)
 
 
-if("${CMAKE_BUILD_TYPE}" STREQUAL "Release" AND (NOT "${CMAKE_C_COMPILER_ID}" STREQUAL "PathScale"))
-	message(WARNING "Building in Release mode with a non-PathScale compiler (${CMAKE_C_COMPILER_ID}) is not supported and probably won't work!")
+if(("${CMAKE_BUILD_TYPE}" STREQUAL "Release" or "${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo") AND (NOT "${CMAKE_C_COMPILER_ID}" STREQUAL "PathScale"))
+	message(FATAL_ERROR "Building in Release mode with a non-PathScale
+	compiler like (${CMAKE_C_COMPILER_ID}) is not supported and probably won't
+	work! Comment out this Error to try anyway, but no bug reports will
+	be accepted.")
 endif()
 
 set(BUILD_PSCLANG FALSE)
