@@ -81,7 +81,7 @@ endif()
 
 
 path64_set_multitarget_sources_base_path(compiler-rt-static "${PATH64_COMPILER_RT_SOURCE}/lib")
-path64_set_multitarget_sources(compiler-rt-static COMMON {SRCS_COMMON})
+path64_set_multitarget_sources(compiler-rt-static COMMON ${SRCS_COMMON})
 path64_set_multitarget_sources(compiler-rt-static x86_32 ${SRCS_COMMON} ${SRCS_x86_32})
 path64_set_multitarget_sources(compiler-rt-static x86_64 ${SRCS_COMMON} ${SRCS_x86_64})
 path64_set_multitarget_property_(compiler-rt-static OUTPUT_NAME "gcc")
@@ -90,7 +90,7 @@ path64_add_multitarget_library(compiler-rt-static STATIC)
 path64_add_dependencies_from_multitarget(compiler-stage-libs-C compiler-rt-static)
 
 path64_set_multitarget_sources_base_path(compiler-rt "${PATH64_COMPILER_RT_SOURCE}/lib")
-path64_set_multitarget_sources(compiler-rt COMMON {SRCS_COMMON})
+path64_set_multitarget_sources(compiler-rt COMMON ${SRCS_COMMON})
 path64_set_multitarget_sources(compiler-rt x86_32 ${SRCS_COMMON} ${SRCS_x86_32})
 path64_set_multitarget_sources(compiler-rt x86_64 ${SRCS_COMMON} ${SRCS_x86_64})
 path64_set_multitarget_property_(compiler-rt OUTPUT_NAME "gcc")
