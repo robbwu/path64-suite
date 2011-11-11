@@ -55,6 +55,7 @@ option(PATH64_ENABLE_MATHLIBS "Enables math libraries" ON)
 option(PATH64_ENABLE_OPENMP "Enables OpenMP" ON)
 option(PATH64_ENABLE_PATHOPT2 "Enables 'PATHOPT2'" OFF)
 option(PATH64_ENABLE_PATHAS "Enables PathAS" ON)
+option(PATH64_ENABLE_DEFAULT_PATHAS "Enables PathAS by default" ON)
 
 
 if(("${CMAKE_BUILD_TYPE}" STREQUAL "Release" or "${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo") AND (NOT "${CMAKE_C_COMPILER_ID}" STREQUAL "PathScale"))
