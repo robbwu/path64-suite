@@ -10,7 +10,7 @@ Step 4) `cd mybuild` with your chosen build directory
 Step 5) Run `cmake ..` with your desired options, for instance:
 
         * `-DCMAKE_BUILD_TYPE=Debug` or `-DCMAKE_BUILD_TYPE=Release`
-          to choose the type of build
+          to choose the type of build [Note: gcc can not do a Release build]
 
         * `-DCMAKE_INSTALL_PREFIX=$HOME/prefix` to install in a local
           tree.
